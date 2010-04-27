@@ -19,9 +19,7 @@ module MetricFu
     end 
 
     def format_directories
-      dirs = MetricFu.saikuro[:input_directory]
-      dirs = dirs.join(" | ") if dirs.is_a? Array
-      dirs.gsub!(/^"(.*)"$/, '\1')
+      dirs = MetricFu.saikuro[:input_directory].join(" | ")
       "\"#{dirs}\""
     end
  
