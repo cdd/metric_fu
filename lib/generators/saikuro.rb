@@ -97,11 +97,9 @@ module MetricFu
 
     def initialize(path)
       @path = path
-      @file_handle = File.open(@path, "r")
-      @elements = []
-      get_elements
+      set_elements
     end
- 
+
     def self.is_valid_text_file?(path)
       File.open(path, "r") do |f|
         if f.eof? || !f.readline.match(/--/)
@@ -121,9 +119,10 @@ module MetricFu
       {:classes => @elements}
     end
  
-    def get_elements
-      begin
-        while (line = @file_handle.readline) do
+    def set_elements
+      @elements = []
+      File.open(@path, "r") do |file|
+        while (line = file.readline) do
           return [] if line.nil? || line !~ /\S/
           element ||= nil
           if line.match /START/
@@ -131,7 +130,7 @@ module MetricFu
               @elements << element
               element = nil
             end
-            line = @file_handle.readline
+            line = file.readline
             element = Saikuro::ParsingElement.new(line)
           elsif line.match /END/
             @elements << element if element
@@ -140,9 +139,9 @@ module MetricFu
             element << line if element
           end
         end
-      rescue EOFError
-        nil
       end
+    rescue EOFError
+      nil
     end
  
  

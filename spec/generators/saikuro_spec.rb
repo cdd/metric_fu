@@ -48,10 +48,10 @@ describe Saikuro do
  
   describe Saikuro::SFile do
     describe "getting elements from a Saikuro result file" do
-     it "should parse nested START/END sections" do
-       path = File.join(File.dirname(__FILE__), "..", "resources", "saikuro_sfiles", "thing.rb_cyclo.html")
+      it "should parse nested START/END sections" do
+        path = File.join(File.dirname(__FILE__), "..", "resources", "saikuro_sfiles", "thing.rb_cyclo.html")
         sfile = Saikuro::SFile.new path
-       sfile.elements.map { |e| e.complexity }.sort.should eql(["0","0","2"])
+        sfile.elements.map { |e| e.complexity }.sort.should eql(["0","0","2"])
       end
     end
   end
