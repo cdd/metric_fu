@@ -6,10 +6,10 @@ require 'lib/metric_fu'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "yabawock-metric_fu"
+    gem.name = "cdd-metric_fu"
     gem.summary = %Q{A fistful of code metrics, with awesome templates and graphs}
     gem.description = %Q{Code metrics from Flog, Flay, RCov, Saikuro, Churn, Reek, Roodi and Rails' stats task}
-    gem.email = "yabawock@gmail.com"
+    gem.email = "github@collaborativedrug.com"
     gem.homepage = "http://metric-fu.rubyforge.org/"
     gem.authors = ["Morton Jonuschat", "Jake Scruggs", "Sean Soper", "Andre Arko", "Petrik de Heus", "Grant McInnes", "Nick Quaranto", "Édouard Brière", "Carl Youngblood"]
     gem.add_dependency("flay", [">= 1.2.1"])

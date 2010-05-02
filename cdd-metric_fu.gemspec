@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{yabawock-metric_fu}
+  s.name = %q{cdd-metric_fu}
   s.version = "1.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Morton Jonuschat", "Jake Scruggs", "Sean Soper", "Andre Arko", "Petrik de Heus", "Grant McInnes", "Nick Quaranto", "Édouard Brière", "Carl Youngblood"]
-  s.date = %q{2010-04-17}
+  s.authors = ["Morton Jonuschat", "Jake Scruggs", "Sean Soper", "Andre Arko", "Petrik de Heus", "Grant McInnes", "Nick Quaranto", "\303\211douard Bri\303\250re", "Carl Youngblood"]
+  s.date = %q{2010-05-03}
   s.description = %q{Code metrics from Flog, Flay, RCov, Saikuro, Churn, Reek, Roodi and Rails' stats task}
-  s.email = %q{yabawock@gmail.com}
+  s.email = %q{github@collaborativedrug.com}
   s.extra_rdoc_files = [
     "README.rdoc",
      "TODO"
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "TODO",
      "VERSION",
+     "cdd-metric_fu.gemspec",
      "home_page/back_all.jpg",
      "home_page/churn.gif",
      "home_page/flay.gif",
@@ -61,9 +62,11 @@ Gem::Specification.new do |s|
      "lib/graphs/flay_grapher.rb",
      "lib/graphs/flog_grapher.rb",
      "lib/graphs/grapher.rb",
+     "lib/graphs/rails_best_practices_grapher.rb",
      "lib/graphs/rcov_grapher.rb",
      "lib/graphs/reek_grapher.rb",
      "lib/graphs/roodi_grapher.rb",
+     "lib/graphs/stats_grapher.rb",
      "lib/metric_fu.rb",
      "lib/metric_fu/railtie.rb",
      "lib/tasks/metric_fu.rake",
@@ -113,22 +116,23 @@ Gem::Specification.new do |s|
      "spec/graphs/engines/gchart_spec.rb",
      "spec/graphs/flay_grapher_spec.rb",
      "spec/graphs/flog_grapher_spec.rb",
+     "spec/graphs/grapher_spec.rb",
      "spec/graphs/rcov_grapher_spec.rb",
      "spec/graphs/reek_grapher_spec.rb",
      "spec/graphs/roodi_grapher_spec.rb",
+     "spec/graphs/stats_grapher_spec.rb",
      "spec/resources/saikuro/app/controllers/sessions_controller.rb_cyclo.html",
      "spec/resources/saikuro/app/controllers/users_controller.rb_cyclo.html",
      "spec/resources/saikuro/index_cyclo.html",
      "spec/resources/saikuro_sfiles/thing.rb_cyclo.html",
      "spec/resources/yml/20090630.yml",
      "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "yabawock-metric_fu.gemspec"
+     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://metric-fu.rubyforge.org/}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{A fistful of code metrics, with awesome templates and graphs}
   s.test_files = [
     "spec/base/base_template_spec.rb",
@@ -148,9 +152,11 @@ Gem::Specification.new do |s|
      "spec/graphs/engines/gchart_spec.rb",
      "spec/graphs/flay_grapher_spec.rb",
      "spec/graphs/flog_grapher_spec.rb",
+     "spec/graphs/grapher_spec.rb",
      "spec/graphs/rcov_grapher_spec.rb",
      "spec/graphs/reek_grapher_spec.rb",
      "spec/graphs/roodi_grapher_spec.rb",
+     "spec/graphs/stats_grapher_spec.rb",
      "spec/spec_helper.rb"
   ]
 
