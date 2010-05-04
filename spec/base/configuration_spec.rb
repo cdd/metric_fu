@@ -85,6 +85,10 @@ describe MetricFu::Configuration do
       template_class.should == AwesomeTemplate
     end
 
+    it "should set #graph_period to 30" do
+      @config.instance_variable_get(:@graph_period).should == 30
+    end    
+
     it 'should set @flay to {:dirs_to_flay => @code_dirs}' do
       @config.instance_variable_get(:@flay).
               should == {:dirs_to_flay => ['lib'], :minimum_score => 100}

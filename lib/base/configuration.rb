@@ -11,6 +11,8 @@ module MetricFu
   AVAILABLE_GRAPHS = [:flog, :flay, :reek, :roodi, :rcov]
   AVAILABLE_GRAPH_ENGINES = [:gchart, :bluff]
 
+  GRAPH_PERIOD = 30 # Only graph 30 days worth of data by default
+  
   # The @@configuration class variable holds a global type configuration
   # object for any parts of the system to use.
   def self.configuration
@@ -137,6 +139,7 @@ module MetricFu
       @file_globs_to_ignore = []
                                    
       @graph_engine = :bluff # can be :bluff or :gchart
+      @graph_period = MetricFu::GRAPH_PERIOD
     end
 
     # Perform a simple check to try and guess if we're running
