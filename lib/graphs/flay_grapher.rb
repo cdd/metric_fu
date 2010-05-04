@@ -2,17 +2,16 @@ module MetricFu
   
   class FlayGrapher < Grapher
     
-    attr_accessor :flay_score, :labels
+    attr_accessor :flay_score
     
     def initialize
       super
       @flay_score = []
-      @labels = {}
     end
     
     def get_metrics(metrics, date)
+      super
       @flay_score.push(metrics[:flay][:total_score].to_i)
-      @labels.update( { @labels.size => date })
     end
     
   end

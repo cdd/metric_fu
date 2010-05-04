@@ -2,17 +2,16 @@ module MetricFu
   
   class RcovGrapher < Grapher
     
-    attr_accessor :rcov_percent, :labels
+    attr_accessor :rcov_percent
     
     def initialize
       super
-      self.rcov_percent = []
-      self.labels = {}
+      @rcov_percent = []
     end
     
     def get_metrics(metrics, date)
-      self.rcov_percent.push(metrics[:rcov][:global_percent_run])
-      self.labels.update( { self.labels.size => date })
+      super
+      @rcov_percent.push(metrics[:rcov][:global_percent_run])
     end
     
   end
