@@ -14,10 +14,11 @@ begin
     gem.authors = ["Morton Jonuschat", "Jake Scruggs", "Sean Soper", "Andre Arko", "Petrik de Heus", "Grant McInnes", "Nick Quaranto", "Édouard Brière", "Carl Youngblood"]
     gem.add_dependency("flay", [">= 1.2.1"])
     gem.add_dependency("flog", ["= 2.2.0"])
+    gem.add_dependency("googlecharts", [">= 1.6.0"])
     gem.add_dependency("rcov", [">= 0.8.3.3"])
     gem.add_dependency("chronic", [">= 0.2.3"])
     gem.add_dependency("churn", [">= 0.0.7"])
-    gem.add_dependency("yabawock-Saikuro", [">= 1.2.0"])
+    gem.add_dependency("japgolly-Saikuro", [">= 1.1.1.0"])
     gem.add_dependency("activesupport", [">= 2.2.3"])
     gem.add_development_dependency("rspec", [">= 1.2.9"])
     gem.add_development_dependency("test-construct", [">= 1.2.0"])

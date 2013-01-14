@@ -1,3 +1,4 @@
+require 'uri'
 module MetricFu
   module GchartGrapher
     COLORS = %w{009999 FF7400 A60000 008500 E6399B 344AD7 00B860 D5CCB9}    
